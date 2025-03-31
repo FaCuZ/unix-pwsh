@@ -31,7 +31,7 @@ To make sure this can never happen to you, fork this repository and edit the fil
 ## TL:DR
 - Paste this into your Powershell, make sure to change the username if you forked the repository:
 ```bash
-iex (iwr "https://raw.githubusercontent.com/CrazyWolf13/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content
+iex (iwr "https://raw.githubusercontent.com/FaCuZ/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content
 ```
 
 ## Features 🌟
@@ -62,10 +62,10 @@ However, this preview is not so meaningful, as most of the visual configuration 
 
 ## Usage 🚀
 - To activate this configuration:
-1. Paste in this command: `iex (iwr "https://raw.githubusercontent.com/CrazyWolf13/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content`.
+1. Paste in this command: `iex (iwr "https://raw.githubusercontent.com/FaCuZ/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content`.
 2. The PowerShell profile is automatically created and the profile injected into, if it does not exist. If it exists, manually place the snippet provided here into the $PROFILE by typing `notepad $PROFILE` into PowerShell. 🛠️:
 > ```powershell
-> if (Test-Path (Join-Path -Path $env:USERPROFILE -ChildPath "unix-pwsh\Microsoft.PowerShell_profile.ps1")) { . (Join-Path -Path $env:USERPROFILE -ChildPath  "unix-pwsh\Microsoft.PowerShell_profile.ps1") } else { iex (iwr "https://raw.githubusercontent.com/CrazyWolf13/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content }
+> if (Test-Path (Join-Path -Path $env:USERPROFILE -ChildPath "unix-pwsh\Microsoft.PowerShell_profile.ps1")) { . (Join-Path -Path $env:USERPROFILE -ChildPath  "unix-pwsh\Microsoft.PowerShell_profile.ps1") } else { iex (iwr "https://raw.githubusercontent.com/FaCuZ/unix-pwsh/main/Microsoft.PowerShell_profile.ps1").Content }
 > ```
 
 3. Make sure to point Windows Terminal to `pwsh` instead of `powershell`, as `pwsh` is the open-sourced 7.x.x version of PowerShell (PowerShell Core). 🔄
