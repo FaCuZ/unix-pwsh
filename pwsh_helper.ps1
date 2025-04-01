@@ -2,7 +2,9 @@ Write-Host "✅ Helper script invoked successfully" -ForegroundColor Green
 
 # Tasks to be executed in the background.
 function BackgroundTasks {
-    Update-PowerShell
+    if ($autoUpdate) {        
+        Update-PowerShell
+    }
     # Update the local cache of files
     CheckScriptFilesForUpdates
     Write-Host "🔄 Updated the local cache of files." -ForegroundColor Green
@@ -158,13 +160,13 @@ function Update-PowerShell {
 # Function to show a GUI Message Box
 # Source: https://stackoverflow.com/questions/58718191/is-there-a-way-to-display-a-pop-up-message-box-in-powershell-that-is-compatible
 function Show-MessageBox {
-    [CmdletBinding(PositionalBinding=$false)]
+    [CmdletBinding(PositionalBinding = $false)]
     param(
-        [Parameter(Mandatory, Position=0)]
+        [Parameter(Mandatory, Position = 0)]
         [string] $Message,
-        [Parameter(Position=1)]
+        [Parameter(Position = 1)]
         [string] $Title,
-        [Parameter(Position=2)]
+        [Parameter(Position = 2)]
         [ValidateSet('OK', 'OKCancel', 'AbortRetryIgnore', 'YesNoCancel', 'YesNo', 'RetryCancel')]
         [string] $Buttons = 'OK',
         [ValidateSet('Information', 'Warning', 'Stop')]
